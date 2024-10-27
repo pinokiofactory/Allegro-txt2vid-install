@@ -4,6 +4,7 @@ A Pinokio Install Script for the [Rhymes Allegro](https://github.com/rhymes-ai/A
 ## Sources
 * Installs a Pinokio fork: https://github.com/ai-anchorite/Allegro-txt2vid
 * Gradio UI and associated code borrowed from: https://huggingface.co/spaces/fffiloni/allegro-text2video
+* RIFE Interpolation Model from [AlexWortega/RIFE](https://huggingface.co/AlexWortega/RIFE)
 
 ## Important Notes
 * Can take over an hour to generate a result. Hopefully will be optimized soon. But yeah, 1 hour on a 3090.  4090 ~30 minutes. 
