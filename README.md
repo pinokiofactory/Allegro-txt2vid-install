@@ -19,3 +19,12 @@ A Pinokio Install Script for the [Rhymes Allegro](https://github.com/rhymes-ai/A
 
 
 ![2024-10-26 16-54-31](https://github.com/user-attachments/assets/d25878c1-a691-4b5b-b0a5-545a988f9450)
+
+
+```bibtex
+@article{allegro2024,
+    title={Allegro: Open the Black Box of Commercial-Level Video Generation Model},
+    author={Yuan Zhou and Qiuyue Wang and Yuxuan Cai and Huan Yang},
+    journal={arXiv preprint arXiv:2410.15458},
+    year={2024}
+}
