@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "2.0",
   title: "Allegro-txt2vid",
-  description: "",
+  description: "A web UI to generate videos with Allegro txt2vid model https://github.com/rhymes-ai/Allegro",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
