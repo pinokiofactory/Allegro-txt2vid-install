@@ -2,7 +2,7 @@
 A Pinokio Install Script for the [Rhymes Allegro](https://github.com/rhymes-ai/Allegro) text-to-video model.
 
 ## Sources
-* Installs a Pinokio fork: https://github.com/ai-anchorite/Allegro-txt2vid
+* Installs a Pinokio fork: https://github.com/pinokiofactory/Allegro-txt2vid
 * Gradio UI and associated code borrowed from: https://huggingface.co/spaces/fffiloni/allegro-text2video
 * RIFE Interpolation Model from [AlexWortega/RIFE](https://huggingface.co/AlexWortega/RIFE)
 
