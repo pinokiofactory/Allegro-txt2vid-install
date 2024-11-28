@@ -1,8 +1,8 @@
 const path = require('path')
 module.exports = {
   version: "2.0",
-  title: "Allegro-txt2vid",
-  description: "[NVIDIA ONLY] Generate videos with Allegro txt2vid model https://github.com/rhymes-ai/Allegro",
+  title: "Allegro-text+img2vid",
+  description: "[NVIDIA ONLY] Generate videos with Allegro txt and text+img2vid models https://github.com/rhymes-ai/Allegro",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
@@ -11,7 +11,7 @@ module.exports = {
       start: info.running("start.js"),
       update: info.running("update.js"),
       reset: info.running("reset.js"),
-	  cache: info.running("delete-cache.js"),
+      cache: info.running("delete-cache.js"),
     }
     if (running.install) {
       return [{
@@ -73,16 +73,20 @@ module.exports = {
           icon: "fa-solid fa-plug",
           text: "Update",
           href: "update.js",
-	      confirm: "Are you sure you wish to update this app?",
+	  confirm: "Are you sure you wish to update this app?",
         }, {
-          icon: "fa-regular fa-circle-xmark",
-          text: "Reset",
-          href: "reset.js",
-	      confirm: "Are you sure you wish to reset this app?",
-		}, {
-          icon: "fa-regular fa-circle-xmark",
-          text: "Delete Gradio Image Cache",
-          href: "delete-cache.js",
+          icon: "fa-solid fa-plug",
+          text: "Install",
+          href: "install.js",
+        }, {
+         icon: "fa-regular fa-circle-xmark",
+         text: "Reset",
+         href: "reset.js",
+         confirm: "Are you sure you wish to reset this app?",
+	}, {
+         icon: "fa-regular fa-circle-xmark",
+         text: "Delete Gradio Image Cache",
+         href: "delete-cache.js",
         }]
       }
     } else {
