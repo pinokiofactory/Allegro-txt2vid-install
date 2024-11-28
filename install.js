@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/ai-anchorite/Allegro-text-img2vid app",
+          "git clone https://github.com/pinokiofactory/Allegro-txt-img2vid app",
         ]
       }
     },
