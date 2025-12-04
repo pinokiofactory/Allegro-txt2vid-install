@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  version: "2.0",
+  version: "3.7",
   title: "Allegro-txt2vid",
   description: "[NVIDIA ONLY] Generate videos with Allegro txt2vid model https://github.com/rhymes-ai/Allegro",
   icon: "icon.png",
@@ -11,7 +11,8 @@ module.exports = {
       start: info.running("start.js"),
       update: info.running("update.js"),
       reset: info.running("reset.js"),
-	  cache: info.running("delete-cache.js"),
+	    cache: info.running("delete-cache.js"),
+      link: info.running("link.js")
     }
     if (running.install) {
       return [{
@@ -63,6 +64,13 @@ module.exports = {
           text: "Clearing Cache",
           href: "delete-cache.js",
         }]
+      } else if (running.link) {
+        return [{
+          default: true,
+          icon: 'fa-solid fa-terminal',
+          text: "Deduplicating",
+          href: "link.js",
+        }]
       } else {
         return [{
           default: true,
@@ -72,17 +80,20 @@ module.exports = {
         }, {
           icon: "fa-solid fa-plug",
           text: "Update",
-          href: "update.js",
-	      confirm: "Are you sure you wish to update this app?",
+          href: "update.js"
         }, {
-          icon: "fa-regular fa-circle-xmark",
-          text: "Reset",
-          href: "reset.js",
-	      confirm: "Are you sure you wish to reset this app?",
-		}, {
           icon: "fa-regular fa-circle-xmark",
           text: "Delete Gradio Image Cache",
           href: "delete-cache.js",
+        }, {
+          icon: "fa-solid fa-file-zipper",
+          text: "<div><strong>Save Disk Space</strong><div>Deduplicates redundant library files</div></div>",
+          href: "link.js",
+        }, {
+          icon: "fa-regular fa-circle-xmark",
+          text: "<div><strong>Reset</strong><div>Revert to pre-install state</div></div>",
+          href: "reset.js",
+          confirm: "Are you sure you wish to reset the app?"
         }]
       }
     } else {
